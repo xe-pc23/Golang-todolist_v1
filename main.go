@@ -4,10 +4,10 @@ import "fmt"
 
 func main() {
 	var choice int //使うToDoリストの選択（1 or 2)
-	fmt.Printf("ToDoListv1へようこそ\n")
+	fmt.Printf("todolist_v1へようこそ\n")
 
 	for {
-		fmt.Println("制限付きToDoリスト(1)か自由ToDoList(2)か選んでください。")
+		fmt.Println("制限付きToDoリスト(1)か自由ToDoリスト(2)か選んでください。")
 		fmt.Scan(&choice)
 
 		if choice == 1 || choice == 2 {
@@ -19,10 +19,10 @@ func main() {
 
 	switch choice {
 	case 1:
-		fmt.Printf("制限付きToDoListですね!タスク上限は5個までの固定長です。\n")
+		fmt.Printf("制限付きToDoリストですね!タスク上限は5個までの固定長です。\n")
 		limittodo()
 	case 2:
-		fmt.Printf("自由 ToDoListですね!タスク上限は無制限の可変長です。\n")
+		fmt.Printf("自由 ToDoリストですね!タスク上限は無制限の可変長です。\n")
 		fmt.Printf("まだ作成途中なので使えません～")
 	} //選択完了時のメッセージ
 
@@ -34,7 +34,7 @@ func limittodo() {
 	var input_task string
 	var index int
 
-	fmt.Println("====固定長配列ToDoList====")
+	fmt.Println("====固定長配列ToDoリスト====")
 
 	for {
 		fmt.Printf("1:タスク表示,2:タスク追加,3:タスク編集,4:タスク削除,5:終了\n")
