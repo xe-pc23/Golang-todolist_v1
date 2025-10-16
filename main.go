@@ -30,7 +30,7 @@ func main() {
 
 func limittodo() {
 	var limitTask = [5]string{}
-	var choicefunction int
+	var choicefunction string
 	var input_task string
 	var index int
 
@@ -43,7 +43,7 @@ func limittodo() {
 		fmt.Scan(&choicefunction)
 		switch choicefunction {
 
-		case 1: //タスク表示
+		case "1": //タスク表示
 			fmt.Printf("--「ToDoリスト」--\n")
 			for i := 0; i < 5; i++ {
 				fmt.Print(i)
@@ -51,7 +51,7 @@ func limittodo() {
 			}
 			fmt.Printf("\n")
 
-		case 2: //タスク追加
+		case "2": //タスク追加
 			canAdd := false //追加できるか確認
 
 			for i := 0; i < len(limitTask); i++ {
@@ -70,7 +70,7 @@ func limittodo() {
 				fmt.Printf("\n")
 			}
 
-		case 3: //タスク編集
+		case "3": //タスク編集
 			fmt.Print("編集する位置(0-4): ")
 			fmt.Scan(&index)
 
@@ -84,7 +84,7 @@ func limittodo() {
 				fmt.Println("無効な位置です")
 			}
 
-		case 4: //タスク削除
+		case "4": //タスク削除
 			fmt.Print("削除する位置: ")
 			fmt.Scan(&index)
 
@@ -102,7 +102,7 @@ func limittodo() {
 				fmt.Printf("\n")
 			}
 
-		case 5: //終了
+		case "5": //終了
 			fmt.Println("終了します")
 			return
 
