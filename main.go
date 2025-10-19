@@ -11,10 +11,10 @@ func main() {
 	fmt.Printf("todolist_v1へようこそ\n")
 
 	for {
-		fmt.Println("制限付きToDoリスト(1)か自由ToDoリスト(2)か選んでください。")
+		fmt.Println("制限付きToDoリスト(1)か自由ToDoリスト(2)かマップ型ToDoリスト(3)か選んでください。")
 		fmt.Scan(&choice)
 
-		if choice == 1 || choice == 2 {
+		if choice == 1 || choice == 2 || choice == 3 {
 			break
 		} else {
 			fmt.Println("正しい値を入力してください")
@@ -28,6 +28,9 @@ func main() {
 	case 2:
 		fmt.Printf("自由 ToDoリストですね!タスク上限は無制限の可変長です。\n")
 		functodo.Freetodo()
+	case 3:
+		fmt.Printf("マップToDoリストですね!マップを活用したToDoリストです\n")
+		functodo.Maptodo()
 	} //選択完了時のメッセージ
 
 }
